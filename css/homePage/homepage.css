@@ -1,0 +1,300 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #002f4b;
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+.page-title {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Navigation */
+.navbar {
+    margin-top: 10px;
+}
+
+.menu-icon {
+    display: none;
+}
+
+
+.navbar a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Search Bar */
+.search-bar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.search-bar p {
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Slider */
+
+.sliding-product-display {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #002f4b;
+}
+
+.sliding-product-display {
+    position: relative;
+}
+
+.slider-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.tab {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #002f4b;
+    color: white;
+}
+
+.slider {
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #002f4b;
+}
+
+
+
+/* Main Content */
+.main-content {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #002f4b;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Capabilities Grid */
+.capability-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.capability-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    flex: 1 1 300px;
+    border-radius: 8px;
+}
+
+.capability-item h3 {
+    margin-top: 0;
+}
+
+/* Contact Us */
+.contact-cta {
+    text-align: center;
+    background-color: #002f4b;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: white;
+    color: #002f4b;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-button:hover {
+    background-color: #ddd;
+}
+
+/* ---------- Tablet Screens ---------- */
+@media (max-width: 1024px) {
+    .page-title {
+        font-size: 2.2rem;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #002f4b;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 28px;
+        cursor: pointer;
+        color: white;
+    }
+}
+
+/* ---------- Mobile Screens ---------- */
+@media (max-width: 600px) {
+    .page-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .search-bar {
+        position: static;
+        margin: 10px auto;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 28px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #002f4b;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+}
